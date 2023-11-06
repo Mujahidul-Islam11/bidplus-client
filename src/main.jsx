@@ -13,6 +13,7 @@ import AddJobs from './Pages/AddJobs.jsx';
 import MyPostedJobs from './Pages/MyPostedJobs.jsx';
 import MyBid from './Pages/MyBid.jsx';
 import BidRequest from './Pages/BidRequest.jsx';
+import AuthProvider from './Pages/AuthProvider.jsx';
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+   <AuthProvider>
+   <RouterProvider router={router}></RouterProvider>
+   </AuthProvider>
   </React.StrictMode>,
 )
