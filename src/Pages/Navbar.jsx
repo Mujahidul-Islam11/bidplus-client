@@ -28,7 +28,8 @@ const Navbar = () => {
               <a href="">Home</a>
             </NavLink>
           </li>
-          <li className="text-xl font-bold">
+          {
+            user ? <li className="text-xl font-bold">
             <NavLink
               to="/addJobs"
               className={({ isActive, isPending }) =>
@@ -37,8 +38,19 @@ const Navbar = () => {
             >
               <a href="">Add Jobs</a>
             </NavLink>
+          </li>: <li className="text-xl font-bold">
+            <NavLink
+              to="/register"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? " text-cyan-300" : ""
+              }
+            >
+              <a href="">Register</a>
+            </NavLink>
           </li>
-          <li className="text-xl font-bold">
+          }
+          {
+            user ? <li className="text-xl font-bold">
             <NavLink
               to="/postedJobs"
               className={({ isActive, isPending }) =>
@@ -47,8 +59,20 @@ const Navbar = () => {
             >
               <a href="">My Posted Jobs</a>
             </NavLink>
-          </li>
+          </li>:
           <li className="text-xl font-bold">
+          <NavLink
+            to="/login"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? " text-cyan-300" : ""
+            }
+          >
+            <a href="">LogIn</a>
+          </NavLink>
+        </li>
+          }
+          {user &&
+            <li className="text-xl font-bold">
             <NavLink
               to="/myBids"
               className={({ isActive, isPending }) =>
@@ -58,7 +82,9 @@ const Navbar = () => {
               <a href="">My Bids</a>
             </NavLink>
           </li>
-          <li className="text-xl font-bold">
+          }
+          {
+            user && <li className="text-xl font-bold">
             <NavLink
               to="/bidRequest"
               className={({ isActive, isPending }) =>
@@ -68,6 +94,7 @@ const Navbar = () => {
               <a href="">Bid Request</a>
             </NavLink>
           </li>
+          }
     </>
   )
     return (

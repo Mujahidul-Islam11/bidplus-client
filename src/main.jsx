@@ -14,6 +14,7 @@ import MyPostedJobs from './Pages/MyPostedJobs.jsx';
 import MyBid from './Pages/MyBid.jsx';
 import BidRequest from './Pages/BidRequest.jsx';
 import AuthProvider from './Pages/AuthProvider.jsx';
+import PrivateRoute from './Pages/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -34,19 +35,19 @@ const router = createBrowserRouter([
       },
       {
         path:'/addJobs',
-        element:<AddJobs></AddJobs>
+        element:<PrivateRoute><AddJobs></AddJobs></PrivateRoute>
       },
       {
         path:'/postedJobs',
-        element:<MyPostedJobs></MyPostedJobs>
+        element:<PrivateRoute><MyPostedJobs></MyPostedJobs></PrivateRoute>
       },
       {
         path:'/myBids',
-        element:<MyBid></MyBid>
+        element:<PrivateRoute><MyBid></MyBid></PrivateRoute>
       },
       {
         path:'/bidRequest',
-        element:<BidRequest></BidRequest>
+        element:<PrivateRoute><BidRequest></BidRequest></PrivateRoute>
       },
     ]
   },
