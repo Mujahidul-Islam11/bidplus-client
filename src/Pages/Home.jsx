@@ -1,10 +1,12 @@
 import Banner from "./Banner";
+import TabCategories from "./TabCategories";
 
 
 const Home = () => {
     return (
-        <div>
+        <div className="container mx-auto">
             <Banner></Banner>
+            <TabCategories></TabCategories>
         </div>
     );
 };

@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "jobTitle": "Full Stack Web Developer",
+      "deadline": "November 30, 2023",
+      "priceRange": "$1,500 - $2,000",
+      "shortDescription": "Develop a responsive e-commerce website for a fashion brand. Must be proficient in HTML, CSS, JavaScript, and experience with WordPress is a plus."
+    },
+    {
+      "id": 2,
+      "jobTitle": "Front-end Developer for Landing Page",
+      "deadline": "December 15, 2023",
+      "priceRange": "$800 - $1,000",
+      "shortDescription": "Create an eye-catching landing page for a tech startup. Skills in HTML, CSS, and responsive design are required."
+    },
+    {
+      "id": 3,
+      "jobTitle": "Back-end Web Developer",
+      "deadline": "January 10, 2024",
+      "priceRange": "$1,200 - $1,500",
+      "shortDescription": "Build the server-side components for a social networking platform. Proficiency in Python and Django framework is a plus."
+    },
+    {
+      "id": 4,
+      "jobTitle": "WordPress Developer",
+      "deadline": "February 5, 2024",
+      "priceRange": "$600 - $800",
+      "shortDescription": "Customize and optimize a WordPress website for a blog. Knowledge of plugins and theme development is required."
+    }
+  ]
