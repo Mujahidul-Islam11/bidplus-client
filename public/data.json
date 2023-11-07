@@ -1,5 +1,5 @@
 {
-  "webDevelopment": [
+[
     {
       "id": 1,
       "jobTitle": "Full Stack Web Developer",
@@ -29,7 +29,7 @@
       "shortDescription": "Customize and optimize a WordPress website for a blog. Knowledge of plugins and theme development is required."
     }
   ],
-  "graphicDesign": [
+[
     {
       "id": 5,
       "jobTitle": "Logo Design for Startup",
@@ -59,7 +59,7 @@
       "shortDescription": "Create an attractive poster for a local event. Must capture the theme and spirit of the event."
     }
   ],
-  "digitalMarketing": [
+[
     {
       "id": 9,
       "jobTitle": "Social Media Marketing Campaign",

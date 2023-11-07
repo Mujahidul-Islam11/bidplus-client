@@ -1,4 +1,7 @@
+import { useRef } from "react";
+
 const AddJobs = () => {
+    const ref = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -27,6 +30,7 @@ const AddJobs = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        ref.current.reset()
       });
   };
   return (
