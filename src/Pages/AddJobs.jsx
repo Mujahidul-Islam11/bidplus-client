@@ -84,7 +84,7 @@ const AddJobs = () => {
             </div>
             <div className="form-control w-full md:w-1/2 md:ml-4">
               <label className="label">
-                <span className="label-text "> Description</span>
+                <span className="label-text ">Description</span>
               </label>
               <label className="input-group">
                 <input
