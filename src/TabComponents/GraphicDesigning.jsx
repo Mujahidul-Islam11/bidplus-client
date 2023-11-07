@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
-const WebDevelopment = ({ webjobs }) => {
-  const { jobTitle, deadline, priceRange, shortDescription } = webjobs || {};
+
+
+const GraphicDesigning = ({grdisJobs}) => {
+    const {jobTitle, deadline, priceRange, shortDescription} = grdisJobs || {}
   return (
     <div className="card bg-base-100 shadow-xl">
       <div className="card-body">
@@ -8,12 +10,12 @@ const WebDevelopment = ({ webjobs }) => {
         <p>{priceRange}</p>
         <p>{shortDescription}</p>
         <p>{deadline}</p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+        <div className="card-actions justify-center">
+          <button className="btn btn-primary ">Bid Now</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default WebDevelopment;
+export default GraphicDesigning;

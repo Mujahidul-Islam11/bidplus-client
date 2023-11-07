@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-const DigitalMarketing = ({ dMJobs }) => {
-  const { jobTitle, deadline, priceRange, shortDescription } = dMJobs || {};
+const WebDevelopment = ({ webjobs }) => {
+  const { jobTitle, deadline, priceRange, shortDescription } = webjobs || {};
   return (
     <div className="card bg-base-100 shadow-xl">
       <div className="card-body">
@@ -8,12 +8,12 @@ const DigitalMarketing = ({ dMJobs }) => {
         <p>{priceRange}</p>
         <p>{shortDescription}</p>
         <p>{deadline}</p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+        <div className="card-actions justify-center">
+          <button className="btn btn-primary">Bid Now</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default DigitalMarketing;
+export default WebDevelopment;
