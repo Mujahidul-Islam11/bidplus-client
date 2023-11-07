@@ -1,10 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "./AuthProvider";
 
 const Details = () => {
   const details = useLoaderData();
   // eslint-disable-next-line no-unused-vars
   const { jobTitle, deadline, price, description, _id } = details || {};
+  const {user} = useContext(AuthContext)
+
+
   return (
     <div className="flex container mx-auto gap-6">
       <div className="card mx-auto glass md:w-1/2">
@@ -13,9 +18,6 @@ const Details = () => {
           <p>{description}</p>
           <p>Last Date : {deadline}</p>
           <p>Price : {price}</p>
-          <div className="card-actions ">
-            <button className="btn btn-primary">Place Your Bid</button>
-          </div>
         </div>
       </div>
       <div className="">
@@ -45,7 +47,7 @@ const Details = () => {
               </label>
               <label className="input-group">
                 <input
-                  type="text"
+                  type="date"
                   name="deadline"
                   placeholder="Deadline"
                   className="input input-bordered w-full"
@@ -60,10 +62,11 @@ const Details = () => {
               </label>
               <label className="input-group">
                 <input
-                  type="date"
+                  type="text"
                   name="email"
                   placeholder="Email"
                   className="input input-bordered w-full"
+                  defaultValue={user.email}
                 />
               </label>
             </div>
@@ -83,7 +86,7 @@ const Details = () => {
           </div>
           <input
             type="submit"
-            value="Add Job Information"
+            value="Place your bid"
             className="btn btn-block"
           />
         </form>

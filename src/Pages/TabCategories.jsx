@@ -43,7 +43,7 @@ const TabCategories = () => {
       <TabPanel>
         <div className="grid md:grid-cols-4 gap-4">
           {web?.map((webjobs) => (
-            <WebDevelopment key={webjobs.id} webjobs={webjobs}></WebDevelopment>
+            <WebDevelopment key={webjobs._id} webjobs={webjobs}></WebDevelopment>
           ))}
         </div>
       </TabPanel>
@@ -51,7 +51,7 @@ const TabCategories = () => {
         <div className="grid md:grid-cols-4 gap-4">
           {grdis?.map((grdisJobs) => (
             <GraphicDesigning
-              key={grdisJobs.id}
+              key={grdisJobs._id}
               grdisJobs={grdisJobs}
             ></GraphicDesigning>
           ))}
@@ -61,7 +61,7 @@ const TabCategories = () => {
         <div className="grid md:grid-cols-4 gap-4">
           {dM?.map((dMJobs) => (
             <DigitalMarketing
-              key={dMJobs.id}
+              key={dMJobs._id}
               dMJobs={dMJobs}
             ></DigitalMarketing>
           ))}
