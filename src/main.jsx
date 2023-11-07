@@ -15,6 +15,7 @@ import MyBid from './Pages/MyBid.jsx';
 import BidRequest from './Pages/BidRequest.jsx';
 import AuthProvider from './Pages/AuthProvider.jsx';
 import PrivateRoute from './Pages/PrivateRoute.jsx';
+import Details from './Pages/Details.jsx';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
       {
         path:'/bidRequest',
         element:<PrivateRoute><BidRequest></BidRequest></PrivateRoute>
+      },
+      {
+        path:'/details/:id',
+        element:<PrivateRoute><Details></Details></PrivateRoute>,
+        loader: ({params})=> fetch(`http://localhost:5000/JobsId/${params.id}`)
       },
     ]
   },
