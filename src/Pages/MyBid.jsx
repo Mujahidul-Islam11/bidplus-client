@@ -1,10 +1,19 @@
-import { useLoaderData } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "./AuthProvider";
 
 
 const MyBid = () => {
-    const bidsData = useLoaderData()
+    const {user} = useContext(AuthContext)
+    const [bidsData, setBidData] = useState()
+    useEffect(()=>{
+        fetch(`http://localhost:5000/Bids?email=${user.email}`)
+        .then(res => res.json())
+        .then(data =>{
+            setBidData(data)
+        })
+    },[user])
     return (
-        <div>
+        <div className="container mx-auto">
             {
                 bidsData?.map(bids => <div key={bids._id} className="overflow-x-auto">
                 <table className="table">

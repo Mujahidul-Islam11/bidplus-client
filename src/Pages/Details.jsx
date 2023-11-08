@@ -15,11 +15,13 @@ const Details = () => {
     const form = e.target;
     const email = form.email.value;
     const deadline = form.deadline.value;
+    const buyerEmail = form.buyerEmail.value;
     const Bids = {
       email,
       deadline,
       price,
       title: jobTitle,
+      buyerEmail,
     };
     console.log(Bids)
     fetch(`http://localhost:5000/Bids`, {
