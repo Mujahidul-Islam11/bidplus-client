@@ -1,9 +1,13 @@
 import { useContext, useRef } from "react";
 import { AuthContext } from "./AuthProvider";
+import swal from "sweetalert";
+import { useNavigate } from "react-router-dom";
 
 const AddJobs = () => {
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate()
   const ref = useRef();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -32,6 +36,10 @@ const AddJobs = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if(data.acknowledged){
+          swal('Well Done', 'Job Data Added Successfully', 'success')
+          navigate('/postedJobs')
+        }
         ref.current.reset();
       });
   };

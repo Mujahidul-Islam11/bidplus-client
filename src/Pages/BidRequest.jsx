@@ -4,6 +4,7 @@ import { AuthContext } from "./AuthProvider";
 const BidRequest = () => {
     const {user} = useContext(AuthContext)
     const [bidReq, setBidReq] = useState()
+
     useEffect(()=>{
         fetch(`http://localhost:5000/BidReq?buyerEmail=${user.email}`)
         .then(res => res.json())
@@ -24,6 +25,7 @@ const BidRequest = () => {
                       <th>Deadline</th>
                       <th>Status</th>
                       <th></th>
+                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -42,11 +44,14 @@ const BidRequest = () => {
                       </td>
                       <td>{bid.deadline}</td>
                       <th>
-                        <button className="btn btn-ghost btn-xs">Pending</button>
+                        <button className="btn btn-ghost btn-xs">{bid.status}</button>
                       </th>
                       <th>
-                        <button className="btn btn-disabled">Completed</button>
+                        <button className="btn">Accept</button>
                       </th>
+                        <th>
+                        <button className="btn">Reject</button>
+                        </th>
                     </tr>
                   </tbody>
                   {/* foot */}
@@ -56,6 +61,7 @@ const BidRequest = () => {
                       <th>Job Title</th>
                       <th>Deadline</th>
                       <th>Status</th>
+                      <th></th>
                       <th></th>
                     </tr>
                   </tfoot>

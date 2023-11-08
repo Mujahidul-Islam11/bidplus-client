@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import swal from "sweetalert";
 
 const UpdateDetails = () => {
   const updateDetails = useLoaderData();
@@ -33,7 +34,9 @@ const UpdateDetails = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        swal('Well Done', 'Your Data Has Been Updated Successfully', 'success')
       });
+      console.log(jobTitle)
   };
 
   return (
