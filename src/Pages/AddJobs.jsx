@@ -1,7 +1,9 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import { AuthContext } from "./AuthProvider";
 
 const AddJobs = () => {
-    const ref = useRef();
+  const { user } = useContext(AuthContext);
+  const ref = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -30,7 +32,7 @@ const AddJobs = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        ref.current.reset()
+        ref.current.reset();
       });
   };
   return (
@@ -51,7 +53,9 @@ const AddJobs = () => {
                   name="email"
                   placeholder="Email"
                   className="input input-bordered w-full"
-                  required 
+                  required
+                  defaultValue={user.email}
+                  readOnly
                 />
               </label>
             </div>
@@ -100,20 +104,20 @@ const AddJobs = () => {
               </label>
             </div>
           </div>
-            <div className="w-full">
-              <div className="form-control w-full">
-                <label className="label">
-                  <span className="label-text ">Category</span>
-                </label>
-                <label className="">
-                  <select name="category" required className="select w-full">
-                    <option value="web-development">Web Development</option>
-                    <option value="digital-marketing">Digital Marketing</option>
-                    <option value="graphics-design">Graphic Design</option>
-                  </select>
-                </label>
-              </div>
+          <div className="w-full">
+            <div className="form-control w-full">
+              <label className="label">
+                <span className="label-text ">Category</span>
+              </label>
+              <label className="">
+                <select name="category" required className="select w-full">
+                  <option value="web-development">Web Development</option>
+                  <option value="digital-marketing">Digital Marketing</option>
+                  <option value="graphics-design">Graphic Design</option>
+                </select>
+              </label>
             </div>
+          </div>
           <div className="md:flex mb-4">
             <div className="form-control w-full ">
               <label className="label">

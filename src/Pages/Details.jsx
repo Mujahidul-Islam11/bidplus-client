@@ -6,8 +6,34 @@ import { AuthContext } from "./AuthProvider";
 const Details = () => {
   const details = useLoaderData();
   // eslint-disable-next-line no-unused-vars
-  const { jobTitle, deadline, price, description, _id } = details || {};
+  const { jobTitle, deadline, price, description, _id, email } = details || {};
   const {user} = useContext(AuthContext)
+
+  const isOwner = user?.email === email 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const deadline = form.deadline.value;
+    const Bids = {
+      email,
+      deadline,
+      price,
+      title: jobTitle,
+    };
+    console.log(Bids)
+    fetch(`http://localhost:5000/Bids`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(Bids),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+  };
 
 
   return (
@@ -25,7 +51,7 @@ const Details = () => {
         <h2 className="text-3xl font-extrabold">
           Add Your Informations
         </h2>
-        <form>
+        <form onSubmit={handleSubmit}>
 
           <div className="md:flex mb-4">
             <div className="form-control w-full md:w-1/2">
@@ -67,6 +93,7 @@ const Details = () => {
                   placeholder="Email"
                   className="input input-bordered w-full"
                   defaultValue={user.email}
+                  readOnly
                 />
               </label>
             </div>
@@ -79,7 +106,9 @@ const Details = () => {
                   type="text"
                   name="buyerEmail"
                   placeholder=""
-                  className="input input-bordered w-full"
+                  className={`input input-bordered w-full `}
+                  defaultValue={email}
+                  readOnly
                 />
               </label>
             </div>
@@ -87,7 +116,8 @@ const Details = () => {
           <input
             type="submit"
             value="Place your bid"
-            className="btn btn-block"
+            className={`btn w-full`}
+            disabled={isOwner}
           />
         </form>
       </div>

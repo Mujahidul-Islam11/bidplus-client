@@ -14,7 +14,7 @@ const Navbar = () => {
       .catch()
       swal("Good job!", "Successfully Logged Out User", "success");
   }
-
+  console.log(user)
 
   const Links = ( 
     <>

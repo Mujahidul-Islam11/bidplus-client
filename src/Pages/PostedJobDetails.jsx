@@ -2,8 +2,8 @@
 import { NavLink } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const PostedJobDetails = ({ posted }) => {
-  const handleDeleteJob = () => {
+const PostedJobDetails = ({ posted, setUserData }) => {
+  const handleDeleteJob = (id) => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -24,7 +24,10 @@ const PostedJobDetails = ({ posted }) => {
                 "Deleted!",
                 "Your job data has been deleted successfully",
                 "success"
-              );
+                );
+                const remaining = posted.filter(postedUser => postedUser._id !== id)
+                setUserData(remaining)
+                
             }
           });
       }
