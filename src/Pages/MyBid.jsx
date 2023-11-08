@@ -5,6 +5,9 @@ import { AuthContext } from "./AuthProvider";
 const MyBid = () => {
     const {user} = useContext(AuthContext)
     const [bidsData, setBidData] = useState()
+    const handleComplete = (status) =>{
+      status == 'In Progress'
+  }
     useEffect(()=>{
         fetch(`http://localhost:5000/Bids?email=${user.email}`)
         .then(res => res.json())
@@ -43,10 +46,10 @@ const MyBid = () => {
                       </td>
                       <td>{bids.deadline}</td>
                       <th>
-                        <button className="btn btn-ghost btn-xs">Pending</button>
+                        <button className="btn btn-ghost btn-xs">{bids.status}</button>
                       </th>
                       <th>
-                        <button className="btn btn-disabled">Completed</button>
+                        <button disabled={!handleComplete(bids.status)} className={`btn`}>Completed</button>
                       </th>
                     </tr>
                   </tbody>

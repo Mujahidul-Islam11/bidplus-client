@@ -16,7 +16,7 @@ const Details = () => {
 
   
   const handleSubmit = (e) => {
-    const status = "Panding";
+    const status = "Pending";
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
@@ -41,8 +41,10 @@ const Details = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        swal('Well Done', 'You Have Successfully Bided', 'success')
+        if(data.acknowledged){
+          swal('Well Done', 'You Have Successfully Bided', 'success')
         navigate('/myBids')
+        }
       });
   };
 

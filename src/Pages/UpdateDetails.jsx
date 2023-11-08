@@ -6,7 +6,8 @@ const UpdateDetails = () => {
   const { jobTitle, deadline, price, description, _id, email } =
     updateDetails || {};
 
-  const handleOnSubmit = (e) => {
+
+    const handleOnSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
@@ -34,9 +35,15 @@ const UpdateDetails = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        swal('Well Done', 'Your Data Has Been Updated Successfully', 'success')
+        if (data.modifiedCount) {
+          swal(
+            "Well Done",
+            "Your Data Has Been Updated Successfully",
+            "success"
+          );
+        }
       });
-      console.log(jobTitle)
+    console.log(jobTitle);
   };
 
   return (
@@ -141,11 +148,7 @@ const UpdateDetails = () => {
               </label>
             </div>
           </div>
-          <input
-            type="submit"
-            value="Update"
-            className="btn btn-block"
-          />
+          <input type="submit" value="Update" className="btn btn-block" />
         </form>
       </div>
     </div>

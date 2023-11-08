@@ -1,9 +1,41 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "./AuthProvider";
+import axios from "axios";
 
 const BidRequest = () => {
     const {user} = useContext(AuthContext)
     const [bidReq, setBidReq] = useState()
+
+    const handleAccept = (id) =>{
+    const status = {status: 'In Progress'}
+    axios.put(`http://localhost:5000/BidReq/${id}`, status)
+    .then(res => {
+      console.log(res.data)
+      if(res.data.modifiedCount>0){
+        const remaining = bidReq?.filter(newBid => newBid._id !== id)
+        const updated = bidReq?.find(updateBid => updateBid._id === id)
+        updated.status = 'In Progress'
+        const newBidData = [updated, ...remaining]
+        setBidReq(newBidData)
+      }
+    })
+    }
+
+    const handleReject = (id) =>{
+    const status = {status: 'Canceled'}
+    axios.put(`http://localhost:5000/BidReq/${id}`, status)
+    .then(res => {
+      console.log(res.data)
+      if(res.data.modifiedCount>0){
+        const remaining = bidReq?.filter(newBid => newBid._id !== id)
+        const updated = bidReq?.find(updateBid => updateBid._id === id)
+        updated.status = 'Canceled'
+        const newBidData = [updated, ...remaining]
+        setBidReq(newBidData)
+      }
+    })
+    }
+    
 
     useEffect(()=>{
         fetch(`http://localhost:5000/BidReq?buyerEmail=${user.email}`)
@@ -12,6 +44,8 @@ const BidRequest = () => {
             setBidReq(data)
         })
     },[user])
+
+
     return (
         <div>
             {
@@ -47,10 +81,10 @@ const BidRequest = () => {
                         <button className="btn btn-ghost btn-xs">{bid.status}</button>
                       </th>
                       <th>
-                        <button className="btn">Accept</button>
+                        <button onClick={()=>handleAccept(bid._id)} className="btn">Accept</button>
                       </th>
                         <th>
-                        <button className="btn">Reject</button>
+                        <button onClick={()=>handleReject(bid._id)} className="btn">Reject</button>
                         </th>
                     </tr>
                   </tbody>
