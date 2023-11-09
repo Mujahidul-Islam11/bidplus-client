@@ -6,10 +6,10 @@ const MyBid = () => {
     const {user} = useContext(AuthContext)
     const [bidsData, setBidData] = useState()
     const handleComplete = (status) =>{
-      status == 'In Progress'
+      return status == 'In Progress'
   }
     useEffect(()=>{
-        fetch(`http://localhost:5000/Bids?email=${user.email}`)
+        fetch(`http://localhost:5000/Bids?email=${user.email}`,{credentials:'include'})
         .then(res => res.json())
         .then(data =>{
             setBidData(data)
@@ -17,8 +17,7 @@ const MyBid = () => {
     },[user])
     return (
         <div className="container mx-auto">
-            {
-                bidsData?.map(bids => <div key={bids._id} className="overflow-x-auto">
+            <div  className="overflow-x-auto">
                 <table className="table">
                   {/* head */}
                   <thead>
@@ -32,41 +31,33 @@ const MyBid = () => {
                   </thead>
                   <tbody>
                     {/* row 1 */}
-                    <tr>
-                      <td>
-                        <div className="flex items-center space-x-3">
-                          <div>
-                            <div className="font-bold">{bids.email}</div>
+                    {
+                      bidsData?.map(bids => <tr key={bids._id}>
+                        <td>
+                          <div className="flex items-center space-x-3">
+                            <div>
+                              <div className="font-bold">{bids.email}</div>
+                            </div>
                           </div>
-                        </div>
-                      </td>
-                      <td>
-                        {bids.title}
-                        <br/>
-                      </td>
-                      <td>{bids.deadline}</td>
-                      <th>
-                        <button className="btn btn-ghost btn-xs">{bids.status}</button>
-                      </th>
-                      <th>
-                        <button disabled={!handleComplete(bids.status)} className={`btn`}>Completed</button>
-                      </th>
-                    </tr>
+                        </td>
+                        <td>
+                          {bids.title}
+                          <br/>
+                        </td>
+                        <td>{bids.deadline}</td>
+                        <th>
+                          <button className="btn btn-ghost btn-xs">{bids.status}</button>
+                        </th>
+                        <th>
+                          <button disabled={!handleComplete(bids.status)} className={`btn`}>Completed</button>
+                        </th>
+                      </tr>)
+                    }
                   </tbody>
                   {/* foot */}
-                  <tfoot>
-                    <tr>
-                      <th>Email</th>
-                      <th>Job Title</th>
-                      <th>Deadline</th>
-                      <th>Status</th>
-                      <th></th>
-                    </tr>
-                  </tfoot>
                   
                 </table>
-              </div>)
-            }
+              </div>
         </div>
     );
 };

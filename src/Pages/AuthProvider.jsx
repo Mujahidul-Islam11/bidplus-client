@@ -10,6 +10,7 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
+import axios from "axios";
 
 export const AuthContext = createContext();
 const GoogleProvider = new GoogleAuthProvider();
@@ -42,13 +43,33 @@ const AuthProvider = ({ children }) => {
   };
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      const userEmail = currentUser?.email || user.email;
+      const loggedUser = { email: userEmail };
+
       setUser(currentUser);
       setLoading(false);
+      if (currentUser) {
+        axios
+          .post("http://localhost:5000/jwt", loggedUser, {
+            withCredentials: true,
+          })
+          .then((res) => {
+            console.log("token", res.data);
+          });
+      } else {
+        axios
+          .post("http://localhost:5000/userOut", loggedUser, {
+            withCredentials: true,
+          })
+          .then((res) => {
+            console.log("token", res.data);
+          });
+      }
     });
     return () => {
       unSubscribe();
     };
-  }, []);
+  }, [user]);
 
   const value = {
     user,
@@ -57,7 +78,7 @@ const AuthProvider = ({ children }) => {
     logOut,
     GoogleSignIn,
     upProfile,
-    loading
+    loading,
   };
   return (
     <div>

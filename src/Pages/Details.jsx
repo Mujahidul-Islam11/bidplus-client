@@ -10,11 +10,21 @@ const Details = () => {
 
   const { jobTitle, deadline, price, description, _id, email } = details || {};
   const { user } = useContext(AuthContext);
-  const navigate = useNavigate()
-  const date = new Date();
+  const navigate = useNavigate();
+  const currentDate = new Date();
+
+  const year = currentDate.getFullYear();
+  const month = String(currentDate.getMonth() + 1).padStart(2, "0"); // Months are zero-based, so add 1 to get the correct month
+  const day = String(currentDate.getDate()).padStart(2, "0");
+
+  const date = `${year}-${month}-${day}`;
+  console.log(parseInt(date));
+  console.log(parseInt(deadline));
+
   const isOwner = user?.email === email;
 
-  
+
+
   const handleSubmit = (e) => {
     const status = "Pending";
     e.preventDefault();
@@ -41,9 +51,9 @@ const Details = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if(data.acknowledged){
-          swal('Well Done', 'You Have Successfully Bided', 'success')
-        navigate('/myBids')
+        if (data.acknowledged) {
+          swal("Well Done", "You Have Successfully Bided", "success");
+          navigate("/myBids");
         }
       });
   };
@@ -73,6 +83,7 @@ const Details = () => {
                     name="price"
                     placeholder="Price"
                     className="input input-bordered w-full"
+                    required
                   />
                 </label>
               </div>
@@ -86,6 +97,7 @@ const Details = () => {
                     name="deadline"
                     placeholder="Deadline"
                     className="input input-bordered w-full"
+                    required
                   />
                 </label>
               </div>
@@ -125,7 +137,7 @@ const Details = () => {
             <input
               type="submit"
               value="Place your bid"
-              className={`btn w-full`}
+              className={`btn w-full ${parseInt(date) > parseInt(deadline) ? "disabled" : ""}`}
               disabled={isOwner}
             />
           </form>
