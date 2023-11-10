@@ -31,7 +31,7 @@ const Details = () => {
       status,
     };
     console.log(Bids);
-    fetch(`http://localhost:5000/Bids`, {
+    fetch(`https://skill-swap-hub-server.vercel.app/Bids`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

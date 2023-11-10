@@ -10,7 +10,7 @@ const MyBid = () => {
       return status == 'In Progress'
   }
     useEffect(()=>{
-        fetch(`http://localhost:5000/Bids?email=${user.email}`,{credentials:'include'})
+        fetch(`https://skill-swap-hub-server.vercel.app/Bids?email=${user.email}`,{credentials:'include'})
         .then(res => res.json())
         .then(data =>{
             setBidData(data)

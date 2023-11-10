@@ -44,27 +44,27 @@ const router = createBrowserRouter([
       {
         path:'/postedJobs',
         element:<PrivateRoute><MyPostedJobs></MyPostedJobs></PrivateRoute>,
-        loader: ()=> fetch('http://localhost:5000/Jobs')
+        loader: ()=> fetch('https://skill-swap-hub-server.vercel.app/Jobs')
       },
       {
         path:'/myBids',
         element:<PrivateRoute><MyBid></MyBid></PrivateRoute>,
-        loader: ()=> fetch('http://localhost:5000/Bids')
+        loader: ()=> fetch('https://skill-swap-hub-server.vercel.app/Bids')
       },
       {
         path:'/bidRequest',
         element:<PrivateRoute><BidRequest></BidRequest></PrivateRoute>,
-        loader: ()=> fetch('http://localhost:5000/Bids')
+        loader: ()=> fetch('https://skill-swap-hub-server.vercel.app/Bids')
       },
       {
         path:'/details/:id',
         element:<PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/JobsId/${params.id}`)
+        loader: ({params})=> fetch(`https://skill-swap-hub-server.vercel.app/JobsId/${params.id}`)
       },
       {
         path:'/updateDetails/:id',
         element:<PrivateRoute><UpdateDetails></UpdateDetails></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/JobsId/${params.id}`)
+        loader: ({params})=> fetch(`https://skill-swap-hub-server.vercel.app/JobsId/${params.id}`)
       },
     ]
   },

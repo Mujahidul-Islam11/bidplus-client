@@ -9,7 +9,7 @@ const MyPostedJobs = () => {
   const [userData, setUserData] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/JobEmail?email=${user?.email}`)
+    fetch(`https://skill-swap-hub-server.vercel.app/JobEmail?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setUserData(data);

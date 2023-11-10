@@ -11,19 +11,19 @@ const TabCategories = () => {
   const [dM, setDM] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:5000/Jobs/web-development")
+    fetch("https://skill-swap-hub-server.vercel.app/Jobs/web-development")
       .then((res) => res.json())
       .then((data) => setWeb(data));
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/Jobs/graphics-design")
+    fetch("https://skill-swap-hub-server.vercel.app/Jobs/graphics-design")
       .then((res) => res.json())
       .then((data) => setGrDis(data));
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/Jobs/digital-marketing")
+    fetch("https://skill-swap-hub-server.vercel.app/Jobs/digital-marketing")
       .then((res) => res.json())
       .then((data) => setDM(data));
   }, []);

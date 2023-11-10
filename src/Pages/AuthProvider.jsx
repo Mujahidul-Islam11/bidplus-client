@@ -50,7 +50,7 @@ const AuthProvider = ({ children }) => {
       setLoading(false);
       if (currentUser) {
         axios
-          .post("http://localhost:5000/jwt", loggedUser, {
+          .post("https://skill-swap-hub-server.vercel.app/jwt", loggedUser, {
             withCredentials: true,
           })
           .then((res) => {
@@ -58,7 +58,7 @@ const AuthProvider = ({ children }) => {
           });
       } else {
         axios
-          .post("http://localhost:5000/userOut", loggedUser, {
+          .post("https://skill-swap-hub-server.vercel.app/userOut", loggedUser, {
             withCredentials: true,
           })
           .then((res) => {

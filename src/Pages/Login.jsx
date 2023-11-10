@@ -46,7 +46,7 @@ const handleGoogleLogin = () => {
           <Helmet>
           <title>Login-Page</title>
         </Helmet>
-            <div className="w-4/12 mx-auto bg-slate-200  rounded-lg">
+            <div className="w-4/12 mx-auto bg-white  rounded-lg">
             <h3 className="text-center text-2xl font-bold text-primary ">Please LogIn</h3>
             <form onSubmit={handleLogin} className="card-body">
         <div className="form-control">

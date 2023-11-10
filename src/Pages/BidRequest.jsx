@@ -11,7 +11,7 @@ const BidRequest = () => {
   const isActive = status => status === 'Pending' 
   const handleAccept = (id) => {
     const status = { status: "In Progress" };
-    axios.put(`http://localhost:5000/BidReq/${id}`, status).then((res) => {
+    axios.put(`https://skill-swap-hub-server.vercel.app/BidReq/${id}`, status).then((res) => {
       console.log(res.data);
       if (res.data.modifiedCount > 0) {
         const remaining = bidReq?.filter((newBid) => newBid._id !== id);
@@ -25,7 +25,7 @@ const BidRequest = () => {
 
   const handleReject = (id) => {
     const status = { status: "Canceled" };
-    axios.put(`http://localhost:5000/BidReq/${id}`, status).then((res) => {
+    axios.put(`https://skill-swap-hub-server.vercel.app/BidReq/${id}`, status).then((res) => {
       console.log(res.data);
       if (res.data.modifiedCount > 0) {
         const remaining = bidReq?.filter((newBid) => newBid._id !== id);
@@ -38,7 +38,7 @@ const BidRequest = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/BidReq?buyerEmail=${user.email}`)
+    fetch(`https://skill-swap-hub-server.vercel.app/BidReq?buyerEmail=${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setBidReq(data);

@@ -26,7 +26,7 @@ const UpdateDetails = () => {
       category,
     };
     console.log(update);
-    fetch(`http://localhost:5000/JobsId/${_id}`, {
+    fetch(`https://skill-swap-hub-server.vercel.app/JobsId/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
