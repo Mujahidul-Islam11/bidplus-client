@@ -1,14 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "./AuthProvider";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 
 const BidRequest = () => {
   const { user } = useContext(AuthContext);
   const [bidReq, setBidReq] = useState();
   // const [active, setActive] = useState(false);
 
-  const isActive = status => status === 'Canceled' || 'In Progress'
-
+  const isActive = status => status === 'Pending' 
   const handleAccept = (id) => {
     const status = { status: "In Progress" };
     axios.put(`http://localhost:5000/BidReq/${id}`, status).then((res) => {
@@ -48,6 +48,9 @@ const BidRequest = () => {
   console.log(bidReq);
   return (
     <div>
+      <Helmet>
+          <title>Bid Request Page</title>
+        </Helmet>
       <div className="overflow-x-auto container mx-auto">
         <table className="table">
           {/* head */}

@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "./AuthProvider";
+import { Helmet } from "react-helmet";
 
 
 const MyBid = () => {
@@ -17,6 +18,9 @@ const MyBid = () => {
     },[user])
     return (
         <div className="container mx-auto">
+          <Helmet>
+          <title>Bid Page</title>
+        </Helmet>
             <div  className="overflow-x-auto">
                 <table className="table">
                   {/* head */}

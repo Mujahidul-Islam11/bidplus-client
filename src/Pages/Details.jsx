@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import swal from "sweetalert";
+import { Helmet } from "react-helmet";
 
 const Details = () => {
   const details = useLoaderData();
@@ -11,19 +12,8 @@ const Details = () => {
   const { jobTitle, deadline, price, description, _id, email } = details || {};
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
-  const currentDate = new Date();
-
-  const year = currentDate.getFullYear();
-  const month = String(currentDate.getMonth() + 1).padStart(2, "0"); // Months are zero-based, so add 1 to get the correct month
-  const day = String(currentDate.getDate()).padStart(2, "0");
-
-  const date = `${year}-${month}-${day}`;
-  console.log(parseInt(date));
-  console.log(parseInt(deadline));
 
   const isOwner = user?.email === email;
-
-
 
   const handleSubmit = (e) => {
     const status = "Pending";
@@ -59,8 +49,11 @@ const Details = () => {
   };
 
   return (
-    <div className="flex container mx-auto gap-6">
-      <div className="card mx-auto glass md:w-1/2">
+    <div className=" container mx-auto gap-6">
+      <Helmet>
+        <title>Job Details</title>
+      </Helmet>
+      <div className="card mx-auto mb-10 glass md:w-1/2">
         <div className="card-body">
           <h2 className="card-title">{jobTitle}</h2>
           <p>{description}</p>
@@ -137,7 +130,7 @@ const Details = () => {
             <input
               type="submit"
               value="Place your bid"
-              className={`btn w-full ${parseInt(date) > parseInt(deadline) ? "disabled" : ""}`}
+              className={`btn w-full `}
               disabled={isOwner}
             />
           </form>

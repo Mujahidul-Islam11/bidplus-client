@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import swal from "sweetalert";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const { createUser, GoogleSignIn, upProfile,logOut } = useContext(AuthContext);
@@ -66,6 +67,9 @@ const Register = () => {
   };
   return (
     <div className="max-h-screen">
+      <Helmet>
+          <title>Register-Page</title>
+        </Helmet>
       <div className="w-4/12 mx-auto bg-slate-200 rounded-lg">
         <h3 className="text-center text-2xl font-bold text-primary ">
           Create Account

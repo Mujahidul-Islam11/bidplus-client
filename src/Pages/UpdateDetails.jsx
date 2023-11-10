@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import swal from "sweetalert";
 
@@ -48,6 +49,9 @@ const UpdateDetails = () => {
 
   return (
     <div className="container mx-auto ">
+      <Helmet>
+          <title>Updating Page</title>
+        </Helmet>
       <div className="bg-cyan-200 p-4 md:p-24 rounded-xl">
         <h2 className="text-3xl  mt-[-50px] font-extrabold">
           Update Job Informations
