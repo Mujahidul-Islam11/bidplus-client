@@ -21,7 +21,7 @@ const MyBid = () => {
           <Helmet>
           <title>Bid Page</title>
         </Helmet>
-            <div  className="overflow-x-auto">
+            <div  className="overflow-x-auto bg-white rounded-lg p-4 container mx-auto">
                 <table className="table">
                   {/* head */}
                   <thead>

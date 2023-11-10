@@ -98,7 +98,7 @@ const Navbar = () => {
     </>
   )
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-slate-200">
   <div className="navbar w-[1300px] mx-auto ">
   <div className="navbar-start">
     <div className="dropdown">
@@ -111,7 +111,7 @@ const Navbar = () => {
       }
       </ul>
     </div>
-    <NavLink to={'/'} className="flex"><img src="https://i.ibb.co/1J75wKN/Royal-Tech-2.png" alt="" className="w-20 " /><i className="text-gray-500 font-bold text-xl">SkillSwapHub</i></NavLink>
+    <NavLink to={'/'} className="flex"><img src="https://i.ibb.co/1J75wKN/Royal-Tech-2.png" alt="" className="w-20 rounded-full" /><i className="text-gray-500 font-bold text-xl">SkillSwapHub</i></NavLink>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

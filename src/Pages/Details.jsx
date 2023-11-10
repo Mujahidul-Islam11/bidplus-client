@@ -53,7 +53,7 @@ const Details = () => {
       <Helmet>
         <title>Job Details</title>
       </Helmet>
-      <div className="card mx-auto mb-10 glass md:w-1/2">
+      <div className="card mx-auto bg-white mb-10 glass md:w-1/2">
         <div className="card-body">
           <h2 className="card-title">{jobTitle}</h2>
           <p>{description}</p>
@@ -62,7 +62,7 @@ const Details = () => {
         </div>
       </div>
       <div className="">
-        <div className="bg-slate-400 rounded-xl p-4 md:p-24">
+        <div className="bg-cyan-400 border rounded-xl p-4 md:p-24">
           <h2 className="text-3xl font-extrabold">Add Your Informations</h2>
           <form onSubmit={handleSubmit}>
             <div className="md:flex mb-4">

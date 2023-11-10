@@ -1,92 +1,34 @@
-{
 [
-    {
-      "id": 1,
-      "jobTitle": "Full Stack Web Developer",
-      "deadline": "November 30, 2023",
-      "priceRange": "$1,500 - $2,000",
-      "shortDescription": "Develop a responsive e-commerce website for a fashion brand. Must be proficient in HTML, CSS, JavaScript, and experience with WordPress is a plus."
-    },
-    {
-      "id": 2,
-      "jobTitle": "Front-end Developer for Landing Page",
-      "deadline": "December 15, 2023",
-      "priceRange": "$800 - $1,000",
-      "shortDescription": "Create an eye-catching landing page for a tech startup. Skills in HTML, CSS, and responsive design are required."
-    },
-    {
-      "id": 3,
-      "jobTitle": "Back-end Web Developer",
-      "deadline": "January 10, 2024",
-      "priceRange": "$1,200 - $1,500",
-      "shortDescription": "Build the server-side components for a social networking platform. Proficiency in Python and Django framework is a plus."
-    },
-    {
-      "id": 4,
-      "jobTitle": "WordPress Developer",
-      "deadline": "February 5, 2024",
-      "priceRange": "$600 - $800",
-      "shortDescription": "Customize and optimize a WordPress website for a blog. Knowledge of plugins and theme development is required."
-    }
-  ],
-[
-    {
-      "id": 5,
-      "jobTitle": "Logo Design for Startup",
-      "deadline": "November 25, 2023",
-      "priceRange": "$300 - $500",
-      "shortDescription": "Create a unique and memorable logo for a new tech startup. Originality and creativity are key."
-    },
-    {
-      "id": 6,
-      "jobTitle": "Brochure Design for Travel Agency",
-      "deadline": "December 10, 2023",
-      "priceRange": "$200 - $300",
-      "shortDescription": "Design a visually appealing brochure for a travel agency. Must convey the spirit of adventure and travel."
-    },
-    {
-      "id": 7,
-      "jobTitle": "Web Banner Graphics",
-      "deadline": "January 5, 2024",
-      "priceRange": "$100 - $150",
-      "shortDescription": "Design eye-catching web banners for an online advertising campaign. Creativity and attention to detail are important."
-    },
-    {
-      "id": 8,
-      "jobTitle": "Poster Design for Event",
-      "deadline": "February 1, 2024",
-      "priceRange": "$150 - $250",
-      "shortDescription": "Create an attractive poster for a local event. Must capture the theme and spirit of the event."
-    }
-  ],
-[
-    {
-      "id": 9,
-      "jobTitle": "Social Media Marketing Campaign",
-      "deadline": "December 20, 2023",
-      "priceRange": "$500 - $800",
-      "shortDescription": "Plan and execute a social media marketing campaign for a new product launch. Experience with Facebook and Instagram ads is a plus."
-    },
-    {
-      "id": 10,
-      "jobTitle": "Email Marketing Campaign",
-      "deadline": "January 15, 2024",
-      "priceRange": "$300 - $500",
-      "shortDescription": "Create and manage an email marketing campaign for an e-commerce store. Knowledge of email marketing tools is required."
-    },
-    {
-      "id": 11,
-      "jobTitle": "SEO Optimization for Website",
-      "deadline": "February 10, 2024",
-      "priceRange": "$400 - $600",
-      "shortDescription": "Optimize the website for search engines to improve organic traffic. Knowledge of SEO best practices is essential."
-    },
-    {
-      "id": 12,
-      "jobTitle": "Pay-Per-Click Advertising Setup",
-      "deadline": "March 5, 2024",
-      "priceRange": "$250 - $400",
-      "shortDescription": "Set up and manage a pay-per-click advertising campaign for an online store. Experience with Google Ads is a plus."
-    }
-  ]
-}
+      {
+        "id": 1,
+        "title": "10 Essential Tools for Web Developers",
+        "author": "John Doe",
+        "date": "2023-11-09",
+        "category": "Web Development",
+        "image": "https://example.com/images/article1.jpg",
+        "summary": "Discover the must-have tools every web developer should consider for a more productive and efficient workflow.",
+        "url": "https://example.com/article/1"
+      },
+      {
+        "id": 2,
+        "title": "Design Trends to Watch in 2023",
+        "author": "Jane Smith",
+        "date": "2023-11-10",
+        "category": "Graphic Design",
+        "image": "https://example.com/images/article2.jpg",
+        "summary": "Explore the design trends that are expected to dominate the graphic design industry in the coming year.",
+        "url": "https://example.com/article/2"
+      },
+      {
+        "id": 3,
+        "title": "Mastering Digital Marketing: Tips for Success",
+        "author": "David Williams",
+        "date": "2023-11-11",
+        "category": "Digital Marketing",
+        "image": "https://example.com/images/article3.jpg",
+        "summary": "Learn the strategies and tactics that can help you achieve success in the dynamic world of digital marketing.",
+        "url": "https://example.com/article/3"
+      }
+    ]
+  
+  

@@ -33,8 +33,8 @@ const TabCategories = () => {
   const DigitalMarket = "Digital Marketing";
 
   return (
-    <Tabs className={"mt-4 border-2 rounded-lg"}>
-      <TabList className={"text-center"}>
+    <Tabs className={"mt-4 border-2 rounded-lg p-4"}>
+      <TabList className={"text-center mb-4 "}>
         <Tab>{webDev}</Tab>
         <Tab>{GraphicDesign}</Tab>
         <Tab>{DigitalMarket}</Tab>

@@ -51,7 +51,7 @@ const BidRequest = () => {
       <Helmet>
           <title>Bid Request Page</title>
         </Helmet>
-      <div className="overflow-x-auto container mx-auto">
+      <div className="overflow-x-auto bg-white rounded-lg p-4 container mx-auto">
         <table className="table">
           {/* head */}
           <thead>

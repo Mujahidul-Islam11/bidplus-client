@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet";
 import Banner from "./Banner";
 import TabCategories from "./TabCategories";
-import TopFrelencers from "./TopFrelencers";
+import TopFrelencers from "./TopFreelancers";
+import Blog from "./Blog";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Banner></Banner>
       <TabCategories></TabCategories>
       <TopFrelencers></TopFrelencers>
+      <Blog></Blog>
     </div>
   );
 };

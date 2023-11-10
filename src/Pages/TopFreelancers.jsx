@@ -6,7 +6,7 @@ const TopFrelencers = () => {
       <h3 className="font-bold text-center text-2xl mb-6">
         Top Freelancer's Of Our Site
       </h3>
-      <div className="grid md:grid-cols-3 gap-6"> 
+      <div className="grid md:grid-cols-3 gap-6 p-4"> 
         <div className="card bg-base-100 shadow-xl">
           <figure>
             <img
