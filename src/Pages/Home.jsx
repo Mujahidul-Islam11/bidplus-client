@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Banner from "./Banner";
 import TabCategories from "./TabCategories";
+import TopFrelencers from "./TopFrelencers";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       </Helmet>
       <Banner></Banner>
       <TabCategories></TabCategories>
+      <TopFrelencers></TopFrelencers>
     </div>
   );
 };
