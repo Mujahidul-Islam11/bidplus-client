@@ -109,9 +109,33 @@ const Navbar = () => {
       {
         Links
       }
+      {user? <div className="flex lg:hidden flex-wrap items-center gap-4">
+              <div className=" flex-wrap items-center gap-2">
+                <img
+                  className="w-[50px] rounded-full"
+                  src={user.photoURL}
+                  alt="User Profile"
+                />
+                <p className="font-semibold">
+                  {user.displayName}
+                </p>
+              </div>
+              <button
+                onClick={handleLogOutUser}
+                type="button"
+                className="btn md:inline-block focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 "
+              >
+                LogOut
+              </button>
+            </div>
+    :
+      <NavLink to={'/login'}>
+      <a className="btn">LogIn</a>
+      </NavLink>
+    }
       </ul>
     </div>
-    <NavLink to={'/'} className="flex"><img src="https://i.ibb.co/1J75wKN/Royal-Tech-2.png" alt="" className="w-20 rounded-full" /><i className="text-gray-500 font-bold text-xl">SkillSwapHub</i></NavLink>
+    <NavLink to={'/'} className="flex"><img src="https://i.ibb.co/1J75wKN/Royal-Tech-2.png" alt="" className="w-20 rounded-full" /><i className="text-gray-500 font-bold text-xl">BidPulse</i></NavLink>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

@@ -6,9 +6,9 @@ const Footer = () => {
   <aside>
     <div className="flex">
     <img src="https://i.ibb.co/1J75wKN/Royal-Tech-2.png" className="w-20 rounded" alt="" />
-    <h3 className="text-xl font-bold"><i>SkillSwapHub</i></h3>
+    <h3 className="text-xl font-bold"><i>BidPulse</i></h3>
     </div>
-    <p>Copyright © 2023 - All right reserved by Dinar</p>
+    <p>Copyright © 2023 - All right reserved by BidPulse</p>
   </aside> 
   <nav className="">
   <h3 className="font-bold text-xl text-gray-700">Social Links</h3>

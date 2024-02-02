@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from "react";
 import auth from "../../firebase.config";
@@ -48,23 +49,7 @@ const AuthProvider = ({ children }) => {
 
       setUser(currentUser);
       setLoading(false);
-      if (currentUser) {
-        axios
-          .post("https://skill-swap-hub-server.vercel.app/jwt", loggedUser, {
-            withCredentials: true,
-          })
-          .then((res) => {
-            console.log("token", res.data);
-          });
-      } else {
-        axios
-          .post("https://skill-swap-hub-server.vercel.app/userOut", loggedUser, {
-            withCredentials: true,
-          })
-          .then((res) => {
-            console.log("token", res.data);
-          });
-      }
+    
     });
     return () => {
       unSubscribe();
