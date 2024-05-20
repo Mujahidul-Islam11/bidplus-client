@@ -4,7 +4,7 @@ import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-const AddJobs = () => {
+const PostNewJob = () => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate()
   const ref = useRef();
@@ -157,4 +157,4 @@ const AddJobs = () => {
   );
 };
 
-export default AddJobs;
+export default PostNewJob;

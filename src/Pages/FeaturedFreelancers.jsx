@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 
-const TopFrelencers = () => {
+const FeaturedFreelancers = () => {
   return (
     <div className="my-16 md:my-20">
       <div className="mb-8 md:mb-12">
@@ -80,4 +80,4 @@ const TopFrelencers = () => {
   );
 };
 
-export default TopFrelencers;
+export default FeaturedFreelancers;

@@ -9,7 +9,6 @@ import Root from './MainLayOut/Root.jsx';
 import Home from './Pages/Home.jsx';
 import Login from './Pages/Login.jsx';
 import Register from './Pages/Register.jsx';
-import AddJobs from './Pages/AddJobs.jsx';
 import MyPostedJobs from './Pages/MyPostedJobs.jsx';
 import MyBid from './Pages/MyBid.jsx';
 import BidRequest from './Pages/BidRequest.jsx';
@@ -18,6 +17,7 @@ import PrivateRoute from './Pages/PrivateRoute.jsx';
 import Details from './Pages/Details.jsx';
 import UpdateDetails from './Pages/UpdateDetails.jsx';
 import ErrorPage from './Pages/ErrorPage.jsx';
+import PostNewJob from './Pages/PostNewJob.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/addJobs',
-        element:<PrivateRoute><AddJobs></AddJobs></PrivateRoute>
+        element:<PrivateRoute><PostNewJob></PostNewJob></PrivateRoute>
       },
       {
         path:'/postedJobs',

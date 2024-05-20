@@ -1,15 +1,14 @@
-import { Helmet } from "react-helmet";
 import Banner from "./Banner";
 import TabCategories from "./TabCategories";
-import TopFrelencers from "./TopFreelancers";
 import Blog from "./Blog";
+import FeaturedFreelancers from "./FeaturedFreelancers";
 
 const Home = () => {
   return (
     <div className="container mx-auto">
       <Banner></Banner>
       <TabCategories></TabCategories>
-      <TopFrelencers></TopFrelencers>
+      <FeaturedFreelancers></FeaturedFreelancers>
       <Blog></Blog>
       
     </div>

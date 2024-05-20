@@ -70,7 +70,7 @@ const Register = () => {
       <Helmet>
           <title>Register-Page</title>
         </Helmet>
-      <div className="mx-4 md:w-4/12 bg-white rounded-lg shadow-lg p-8 border">
+      <div className="mx-4 md:w-4/12 bg-white rounded-lg shadow-lg p-2 border">
         <h3 className="text-center text-2xl font-bold text-primary ">
           Create Account
         </h3>
