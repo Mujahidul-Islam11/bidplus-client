@@ -2,11 +2,10 @@
 
 const Footer = () => {
     return (
-        <footer className="footer mt-10 p-10 bg-base-200 text-base-content">
+        <footer className="footer mt-10 p-10 border-t text-base-content">
   <aside>
     <div className="flex">
-    <img src="https://i.ibb.co/1J75wKN/Royal-Tech-2.png" className="w-20 rounded" alt="" />
-    <h3 className="text-xl font-bold"><i>BidPulse</i></h3>
+    <h3 className="text-xl font-extrabold">BidPlus.</h3>
     </div>
     <p>Copyright © 2023 - All right reserved by BidPulse</p>
   </aside> 

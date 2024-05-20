@@ -28,16 +28,14 @@ const TabCategories = () => {
       .then((data) => setDM(data));
   }, []);
 
-  const webDev = "Web Development";
-  const GraphicDesign = "Graphic designer";
-  const DigitalMarket = "Digital Marketing";
+
 
   return (
     <Tabs className={"mt-4 border-2 rounded-lg p-4"}>
-      <TabList className={"text-center mb-4 "}>
-        <Tab>{webDev}</Tab>
-        <Tab>{GraphicDesign}</Tab>
-        <Tab>{DigitalMarket}</Tab>
+      <TabList className={"text-center mb-4 flex justify-center gap-5"}>
+      <Tab className="cursor-pointer selected:text-[#6D54FE]">Web Development</Tab>
+      <Tab className="cursor-pointer selected:text-[#6D54FE]">Graphic Design</Tab>
+      <Tab className="cursor-pointer selected:text-[#6D54FE]">Digital Marketing</Tab>
       </TabList>
 
       <TabPanel>
