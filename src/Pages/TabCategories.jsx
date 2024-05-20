@@ -30,13 +30,13 @@ const TabCategories = () => {
   }, []);
 
   return (
-    <div>
-      <h3 className="font-bold text-center text-2xl mb-6"></h3>
+    <div className="mx-auto flex justify-center my-16 md:my-20">
+     <div>
       <div className="mb-6 md:mb-12">
-        <h3 className="font-bold text-center text-4xl mb-2">
+        <h3 className="font-bold text-center text-4xl md:text-5xl mb-3">
           Discover Your Next Opportunity
         </h3>
-        <p className="text-gray-700 text-center">
+        <p className="text-gray-700 text-center text-lg">
           Explore our job board and find your next career opportunity.
         </p>
       </div>
@@ -83,6 +83,7 @@ const TabCategories = () => {
           </div>
         </TabPanel>
       </Tabs>
+     </div>
     </div>
   );
 };

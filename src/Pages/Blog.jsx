@@ -2,10 +2,10 @@
 
 const Blog = () => {
   return (
-    <div className="my-10">
+    <div className="my-16 md:my-20">
       <div className="mb-6 md:mb-12">
-        <h3 className="font-bold text-center text-4xl mb-2">Our Blogs</h3>
-        <p className="text-gray-700 text-center">
+        <h3 className="font-bold text-center text-4xl md:text-5xl mb-3">Our Blogs</h3>
+        <p className="text-gray-700 text-center text-lg">
           Explore our blog for career-enhancing insights,<br /> expert advice, and
           inspiring stories.
         </p>
