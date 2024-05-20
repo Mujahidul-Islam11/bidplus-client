@@ -21,47 +21,47 @@ const Navbar = () => {
             isPending ? "pending" : isActive ? " text-[#6D54FE]" : ""
           }
         >
-          <a href="">Home</a>
+          Home
         </NavLink>
       </li>
         <li className="text-base font-400">
           <NavLink
             to="/addJobs"
             className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? " text-cyan-300" : ""
+              isPending ? "pending" : isActive ? " text-[#6D54FE]" : ""
             }
           >
-            <a href="">Post New Job</a>
+            Post New Job
           </NavLink>
         </li>
       <li className="text-base font-400">
           <NavLink
             to="/postedJobs"
             className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? " text-cyan-300" : ""
+              isPending ? "pending" : isActive ? " text-[#6D54FE]" : ""
             }
           >
-            <a href="">My Job Posts</a>
+           My Job Posts
           </NavLink>
         </li>
         <li className="text-base font-400">
           <NavLink
             to="/myBids"
             className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? " text-cyan-300" : ""
+              isPending ? "pending" : isActive ? " text-[#6D54FE]" : ""
             }
           >
-            <a href="">My Bids</a>
+            My Bids
           </NavLink>
         </li>
         <li className="text-base font-400">
           <NavLink
             to="/bidRequest"
             className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? " text-cyan-300" : ""
+              isPending ? "pending" : isActive ? " text-[#6D54FE]" : ""
             }
           >
-            <a href="">Bid Tracker</a>
+         Bid Tracker
           </NavLink>
       </li>
       

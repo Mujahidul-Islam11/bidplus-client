@@ -66,11 +66,11 @@ const Register = () => {
       });
   };
   return (
-    <div className="max-h-screen">
+    <div className="flex justify-center items-center h-screen my-10">
       <Helmet>
           <title>Register-Page</title>
         </Helmet>
-      <div className="w-4/12 mx-auto bg-white rounded-lg">
+      <div className="w-4/12 bg-white rounded-lg shadow-lg p-8 border">
         <h3 className="text-center text-2xl font-bold text-primary ">
           Create Account
         </h3>
@@ -123,24 +123,23 @@ const Register = () => {
               required
             />
           </div>
-          <h3 className="text-center">
-            Already have an account? please{" "}
-            <NavLink className={"font-bold"} to={"/login"}>
-              <i>LogIn</i>
+          <div className="flex justify-between items-center">
+            <NavLink to="/login" className="font-bold text-primary">
+              Already have an account? Login
             </NavLink>
-          </h3>
-          <div className="form-control mt-6">
-            <button className="btn btn-primary">Register</button>
+            <button type="submit" className="btn btn-primary">
+              Register
+            </button>
           </div>
         </form>
-        <h2 className="font-bold text-center text-xl ">Or</h2>
+        <div className="divider">OR</div>
         <button
           onClick={handleGoogleRegister}
-          className="flex btn btn-secondary w-full"
+          className="flex btn capitalize bg-[#6D54FE] text-white hover:bg-[#6e54fed6] w-full"
         >
           <img
             src="https://i.ibb.co/QpyZXNR/7123025-logo-google-g-icon.png"
-            className="w-14 h-14  rounded-lg"
+            className="w-10 h-10 "
             alt=""
           />
           <h3 className="font-bold text-xl">Google</h3>
