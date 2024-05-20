@@ -4,10 +4,10 @@ const TopFrelencers = () => {
   return (
     <div className="my-16 md:my-20">
       <div className="mb-8 md:mb-12">
-        <h2 className="font-bold text-center text-4xl md:text-5xl mb-3">
+        <h2 className="font-bold text-center text-2xl md:text-5xl mb-3">
           Meet Our Top Recruiters
         </h2>
-        <p className="text-gray-700 text-center text-lg">
+        <p className="text-gray-700 text-center text-sm md:text-lg">
           Connect with industry-leading experts to find your perfect fit.
         </p>
       </div>

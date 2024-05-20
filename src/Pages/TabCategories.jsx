@@ -33,10 +33,10 @@ const TabCategories = () => {
     <div className="mx-auto flex justify-center my-16 md:my-20">
      <div>
       <div className="mb-6 md:mb-12">
-        <h3 className="font-bold text-center text-4xl md:text-5xl mb-3">
+        <h3 className="font-bold text-center text-2xl md:text-5xl mb-3">
           Discover Your Next Opportunity
         </h3>
-        <p className="text-gray-700 text-center text-lg">
+        <p className="text-gray-700 text-center text-sm md:text-lg">
           Explore our job board and find your next career opportunity.
         </p>
       </div>

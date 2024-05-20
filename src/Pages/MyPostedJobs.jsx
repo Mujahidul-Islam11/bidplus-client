@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import PostedJobDetails from "./PostedJobDetails";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "./AuthProvider";

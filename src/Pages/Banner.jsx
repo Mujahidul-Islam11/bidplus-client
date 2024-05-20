@@ -9,9 +9,9 @@ const Banner = () => {
         <p className="text-sm md:text-xl text-gray-700 mt-2">
           The easiest way for freelancers to connect with top employers.
         </p>
-        <div className="join mt-8 rounded">
+        <div className="join mt-8 rounded mx-auto ">
           <input
-            className="input input-bordered join-item md:w-[360px]"
+            className="input input-bordered join-item w-[160px] md:w-[360px]"
             placeholder="Your email"
           />
           <button className="btn join-item text-white bg-[#6D54FE] hover:bg-[#6e54fed0]">
