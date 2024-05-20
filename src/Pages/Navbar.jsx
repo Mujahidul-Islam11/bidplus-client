@@ -94,8 +94,7 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {Links}
-              {user ? (
-                <div className="flex lg:hidden flex-wrap items-center gap-4">
+              {user && <div className="flex lg:hidden flex-wrap items-center gap-4">
                   <div className=" flex-wrap items-center gap-2">
                     <img
                       className="w-[50px] rounded-full"
@@ -111,17 +110,12 @@ const Navbar = () => {
                   >
                     LogOut
                   </button>
-                </div>
-              ) : (
-                <NavLink to={"/login"}>
-                  <a className="btn">LogIn</a>
-                </NavLink>
-              )}
+                </div>}
             </ul>
           </div>
           {/* Logo */}
           <NavLink to={"/"} className="flex">
-            <h3 className="text-xl font-900">BidPlus.</h3>
+            <h3 className="text-base md:text-xl font-900">BidPlus.</h3>
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -147,19 +141,19 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
-            <div className="flex gap-6 ">
+            <div className="flex gap-3 md:gap-6 ">
               <NavLink to="/login">
               <button
                 type="button"
-                className="btn text-base capitalize border-[#6D54FE] bg-white text-[#6D54FE] hover:bg-[#6D54FE] hover:text-white"
+                className="btn text-sm md:text-base capitalize border-[#6D54FE] bg-white text-[#6D54FE] hover:bg-[#6D54FE] hover:text-white"
               >
-                Login
+                Log in
               </button>
             </NavLink>
               <NavLink to="/register">
               <button
                 type="button"
-                className="btn text-base capitalize bg-[#6D54FE] text-white hover:text-[#6D54FE] hover:border-[#6D54FE] hover:bg-white"
+                className="btn text-sm md:text-base capitalize bg-[#6D54FE] text-white hover:text-[#6D54FE] hover:border-[#6D54FE] hover:bg-white"
               >
                 Sign Up
               </button>
