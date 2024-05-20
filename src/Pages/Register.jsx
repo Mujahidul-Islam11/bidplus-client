@@ -66,11 +66,11 @@ const Register = () => {
       });
   };
   return (
-    <div className="flex justify-center items-center h-screen my-10">
+    <div className="flex justify-center items-center md:h-screen my-10">
       <Helmet>
           <title>Register-Page</title>
         </Helmet>
-      <div className="w-4/12 bg-white rounded-lg shadow-lg p-8 border">
+      <div className="mx-4 md:w-4/12 bg-white rounded-lg shadow-lg p-8 border">
         <h3 className="text-center text-2xl font-bold text-primary ">
           Create Account
         </h3>

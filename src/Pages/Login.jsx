@@ -39,11 +39,11 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center">
       <Helmet>
         <title>Login-Page</title>
       </Helmet>
-      <div className="w-4/12 bg-white rounded-lg shadow-lg p-8 border">
+      <div className="mx-4 md:w-4/12 bg-white rounded-lg shadow-lg p-8 border">
         <h3 className="text-center text-3xl font-bold text-primary mb-6">
           Welcome Back!
         </h3>
@@ -85,7 +85,8 @@ const Login = () => {
             className="w-10 h-10"
             alt=""
           />
-          <h3 className="font-bold text-xl">Continue with Google</h3>
+          <h3 className="font-bold text-xl flex md:hidden">Google</h3>
+          <h3 className="font-bold text-xl hidden md:flex">Continue with Google</h3>
         </button>
       </div>
     </div>
