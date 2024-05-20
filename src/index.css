@@ -6,6 +6,12 @@ body {
   font-family: Roboto;
 }
 
+.my-custom-active-tab {
+  color: #6D54FE;
+  border: 1px solid #6D54FE;
+  padding: 4px 8px;
+}
+
 .font-400 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;

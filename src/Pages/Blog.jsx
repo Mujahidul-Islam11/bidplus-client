@@ -3,9 +3,13 @@
 const Blog = () => {
   return (
     <div className="my-10">
-      <h3 className="font-bold text-center text-2xl mb-6">
-        Our Blogs And Articles
-      </h3>
+      <div className="mb-6 md:mb-12">
+        <h3 className="font-bold text-center text-4xl mb-2">Our Blogs</h3>
+        <p className="text-gray-700 text-center">
+          Explore our blog for career-enhancing insights,<br /> expert advice, and
+          inspiring stories.
+        </p>
+      </div>
       <div className="grid md:grid-cols-3 gap-6 px-5">
         <div className="relative flex flex-col bg-white shadow-md rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
           <img

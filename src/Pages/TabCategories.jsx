@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import WebDevelopment from "../TabComponents/WebDevelopment";
 import GraphicDesigning from "../TabComponents/GraphicDesigning";
 import DigitalMarketing from "../TabComponents/DigitalMarketing";
+import "../index.css"
 
 const TabCategories = () => {
   const [web, setWeb] = useState();
@@ -28,44 +29,61 @@ const TabCategories = () => {
       .then((data) => setDM(data));
   }, []);
 
-
-
   return (
-    <Tabs className={"mt-4 border-2 rounded-lg p-4"}>
-      <TabList className={"text-center mb-4 flex justify-center gap-5"}>
-      <Tab className="cursor-pointer selected:text-[#6D54FE]">Web Development</Tab>
-      <Tab className="cursor-pointer selected:text-[#6D54FE]">Graphic Design</Tab>
-      <Tab className="cursor-pointer selected:text-[#6D54FE]">Digital Marketing</Tab>
-      </TabList>
-
-      <TabPanel>
-        <div className="grid md:grid-cols-4 gap-4">
-          {web?.map((webjobs) => (
-            <WebDevelopment key={webjobs._id} webjobs={webjobs}></WebDevelopment>
-          ))}
-        </div>
-      </TabPanel>
-      <TabPanel>
-        <div className="grid md:grid-cols-4 gap-4">
-          {grdis?.map((grdisJobs) => (
-            <GraphicDesigning
-              key={grdisJobs._id}
-              grdisJobs={grdisJobs}
-            ></GraphicDesigning>
-          ))}
-        </div>
-      </TabPanel>
-      <TabPanel>
-        <div className="grid md:grid-cols-4 gap-4">
-          {dM?.map((dMJobs) => (
-            <DigitalMarketing
-              key={dMJobs._id}
-              dMJobs={dMJobs}
-            ></DigitalMarketing>
-          ))}
-        </div>
-      </TabPanel>
-    </Tabs>
+    <div>
+      <h3 className="font-bold text-center text-2xl mb-6"></h3>
+      <div className="mb-6 md:mb-12">
+        <h3 className="font-bold text-center text-4xl mb-2">
+          Discover Your Next Opportunity
+        </h3>
+        <p className="text-gray-700 text-center">
+          Explore our job board and find your next career opportunity.
+        </p>
+      </div>
+      <Tabs className={`mt-4 rounded-lg p-4`}  selectedTabClassName="my-custom-active-tab">
+        <TabList className={"text-center mb-4 flex justify-center gap-8"}>
+          <Tab className="cursor-pointer ">
+            Web Development
+          </Tab>
+          <Tab className="cursor-pointer ">
+            Graphic Design
+          </Tab>
+          <Tab className="cursor-pointer ">
+            Digital Marketing
+          </Tab>
+        </TabList>
+        <TabPanel>
+          <div className="grid md:grid-cols-4 gap-4">
+            {web?.map((webjobs) => (
+              <WebDevelopment
+                key={webjobs._id}
+                webjobs={webjobs}
+              ></WebDevelopment>
+            ))}
+          </div>
+        </TabPanel>
+        <TabPanel>
+          <div className="grid md:grid-cols-4 gap-4">
+            {grdis?.map((grdisJobs) => (
+              <GraphicDesigning
+                key={grdisJobs._id}
+                grdisJobs={grdisJobs}
+              ></GraphicDesigning>
+            ))}
+          </div>
+        </TabPanel>
+        <TabPanel>
+          <div className="grid md:grid-cols-4 gap-4">
+            {dM?.map((dMJobs) => (
+              <DigitalMarketing
+                key={dMJobs._id}
+                dMJobs={dMJobs}
+              ></DigitalMarketing>
+            ))}
+          </div>
+        </TabPanel>
+      </Tabs>
+    </div>
   );
 };
 
