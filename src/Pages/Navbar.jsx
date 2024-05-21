@@ -10,7 +10,6 @@ const Navbar = () => {
     logOut().then().catch();
     swal("Good job!", "Successfully Logged Out User", "success");
   };
-  console.log(user);
 
   const Links = (
     <>
@@ -69,7 +68,7 @@ const Navbar = () => {
   );
   return (
     <div className="navbar">
-      <div className="navbar w-[1300px] mx-auto ">
+      <div className="navbar md:w-[1300px] mx-auto items-center">
         <div className="navbar-start">
           {/* Dropdown section for small device */}
           <div className="dropdown">
@@ -94,23 +93,7 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {Links}
-              {user && <div className="flex lg:hidden flex-wrap items-center gap-4">
-                  <div className=" flex-wrap items-center gap-2">
-                    <img
-                      className="w-[50px] rounded-full"
-                      src={user.photoURL}
-                      alt="User Profile"
-                    />
-                    <p className="font-semibold">{user.displayName}</p>
-                  </div>
-                  <button
-                    onClick={handleLogOutUser}
-                    type="button"
-                    className="btn md:inline-block focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 "
-                  >
-                    LogOut
-                  </button>
-                </div>}
+              
             </ul>
           </div>
           {/* Logo */}
@@ -118,12 +101,14 @@ const Navbar = () => {
             <h3 className="text-base md:text-xl font-900">BidPlus.</h3>
           </NavLink>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        {/* Navbar list links */}
+        <div className="navbar-center hidden md:flex">
           <ul className="menu menu-horizontal px-1">{Links}</ul>
         </div>
+        {/* Profile and login, sign up button */}
         <div className="navbar-end">
           {user ? (
-            <div className="lg:flex hidden flex-wrap items-center gap-4">
+            <div className="md:flex hidden flex-wrap items-center gap-4">
               <div className="flex flex-wrap items-center gap-2">
                 <img
                   className="w-[50px] rounded-full"
@@ -135,13 +120,13 @@ const Navbar = () => {
               <button
                 onClick={handleLogOutUser}
                 type="button"
-                className="btn border-[#6D54FE] bg-white text-[#6D54FE] hover:bg-[#6D54FE] hover:text-white"
+                className="btn lg:btn-md btn-sm border-[#6D54FE] bg-white text-[#6D54FE] hover:bg-[#6D54FE] hover:text-white"
               >
                 LogOut
               </button>
             </div>
           ) : (
-            <div className="flex gap-3 md:gap-6 ">
+            <div className="flex gap-3 md:gap-6">
               <NavLink to="/login">
               <button
                 type="button"
@@ -160,6 +145,25 @@ const Navbar = () => {
             </NavLink>
             </div>
           )}
+          <div>
+              {user && <div className="flex md:hidden flex-wrap items-center gap-4 relative">
+                  <div className=" flex-wrap flex items-center gap-2">
+                    <img
+                      className="w-[40px] md:w-[50px] rounded-full"
+                      src={user.photoURL}
+                      alt="User Profile"
+                    />
+                    <p className="font-semibold text-sm md:text-base hidden sm:flex">{user.displayName}</p>
+                  </div>
+                  <button
+                    onClick={handleLogOutUser}
+                    type="button"
+                    className="btn btn-sm md:btn-md border-[#6D54FE] bg-white text-[#6D54FE] hover:bg-[#6D54FE] hover:text-white"
+                  >
+                    LogOut
+                  </button>
+                </div>}
+              </div>
         </div>
       </div>
     </div>
