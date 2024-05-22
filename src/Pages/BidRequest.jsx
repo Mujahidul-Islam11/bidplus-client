@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "./AuthProvider";
 import axios from "axios";
@@ -57,7 +58,7 @@ const BidRequest = () => {
       <Helmet>
         <title>Bid Request Page</title>
       </Helmet>
-      {bidReq > 0 ? (
+      {bidReq?.length > 0 ? (
         <div className="overflow-x-auto bg-white rounded-lg p-4 container mx-auto">
           <table className="table">
             {/* head */}

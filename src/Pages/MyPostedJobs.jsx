@@ -20,11 +20,11 @@ const MyPostedJobs = () => {
         setUserData(data);
       });
   }, [userData, user]);
-  console.log(userData)
+  console.log(userData.length)
   return (
-    <div>
-      {userData > 0 ? (
-        <div className="grid md:grid-cols-4 container mx-auto gap-4 h-screen">
+    <div className="my-16 md:my-20">
+      {userData?.length > 0 ? (
+        <div className="grid md:grid-cols-4 container mx-auto gap-4">
           <Helmet>
             <title>Posted Job Page</title>
           </Helmet>

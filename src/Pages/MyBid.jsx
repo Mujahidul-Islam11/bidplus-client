@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "./AuthProvider";
 import { Helmet } from "react-helmet";
@@ -23,7 +24,7 @@ const MyBid = () => {
       <Helmet>
         <title>Bid Page</title>
       </Helmet>
-      {bidsData > 0 ? (
+      {bidsData?.length > 0 ? (
         <div className="overflow-x-auto bg-white rounded-lg p-4 container mx-auto">
           <table className="table">
             {/* head */}
