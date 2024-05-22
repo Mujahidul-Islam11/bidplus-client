@@ -20,6 +20,7 @@ const MyPostedJobs = () => {
         setUserData(data);
       });
   }, [userData, user]);
+  console.log(userData)
   return (
     <div>
       {userData > 0 ? (

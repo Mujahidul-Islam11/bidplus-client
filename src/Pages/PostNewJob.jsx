@@ -47,7 +47,7 @@ const PostNewJob = () => {
   };
 
   return (
-    <div className="container mx-auto my-6">
+    <div className="container mx-auto my-16 md:my-20">
       <div className="mb-6 md:mb-12">
         <h3 className="font-bold text-center text-2xl md:text-5xl mb-3">Hire Top Talent - Post Your Job</h3>
         <p className="text-gray-700 text-center text-sm md:text-lg">
