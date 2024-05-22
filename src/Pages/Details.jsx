@@ -49,11 +49,11 @@ const Details = () => {
   };
 
   return (
-    <div className=" container mx-auto gap-6">
+    <div className=" container mx-auto gap-6 my-16 md:my-20">
       <Helmet>
         <title>Details | {jobTitle}</title>
       </Helmet>
-      <div className="card mx-auto bg-white mb-10 glass md:w-1/2">
+      <div className="card mx-auto bg-white mb-10 border mx-4 md:w-1/2">
         <div className="card-body">
           <h2 className="card-title">{jobTitle}</h2>
           <p>{description}</p>
@@ -62,13 +62,13 @@ const Details = () => {
         </div>
       </div>
       <div className="">
-        <div className="bg-cyan-400 border rounded-xl p-4 md:p-24">
-          <h2 className="text-3xl font-extrabold">Add Your Informations</h2>
+          <h2 className="text-3xl font-extrabold text-center mb-6">Add Your Information</h2>
+        <div className="border rounded-xl p-4 md:px-16 mx-4 md:py-10">
           <form onSubmit={handleSubmit}>
             <div className="md:flex mb-4">
               <div className="form-control w-full md:w-1/2">
                 <label className="label">
-                  <span className="label-text ">Price you want</span>
+                  <span className="label-text ">Expected Price</span>
                 </label>
                 <label className="input-group">
                   <input
@@ -128,11 +128,11 @@ const Details = () => {
               </div>
             </div>
             <input
-              type="submit"
-              value="Place your bid"
-              className={`btn w-full `}
-              disabled={isOwner}
-            />
+            type="submit"
+            value="Bid now"
+            disabled={isOwner}
+            className="btn w-full capitalize btn-sm md:btn-md border-[#6D54FE] bg-white text-[#6D54FE] hover:bg-[#6D54FE] hover:text-white"
+          />
           </form>
         </div>
       </div>
