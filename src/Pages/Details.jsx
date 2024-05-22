@@ -51,7 +51,7 @@ const Details = () => {
   return (
     <div className=" container mx-auto gap-6">
       <Helmet>
-        <title>Job Details</title>
+        <title>Details | {jobTitle}</title>
       </Helmet>
       <div className="card mx-auto bg-white mb-10 glass md:w-1/2">
         <div className="card-body">

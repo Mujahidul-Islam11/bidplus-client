@@ -9,6 +9,7 @@ const PostNewJob = () => {
   const navigate = useNavigate()
   const ref = useRef();
 
+  // POST method -- for adding data to the database
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -44,14 +45,18 @@ const PostNewJob = () => {
         ref.current.reset();
       });
   };
+
   return (
-    <div className="container mx-auto ">
-      <div className="bg-cyan-200 p-4 md:p-24 rounded-xl">
-        <h2 className="text-3xl  mt-[-50px] font-extrabold">
-          Add Your Job Informations
-        </h2>
+    <div className="container mx-auto my-6">
+      <div className="mb-6 md:mb-12">
+        <h3 className="font-bold text-center text-2xl md:text-5xl mb-3">Hire Top Talent - Post Your Job</h3>
+        <p className="text-gray-700 text-center text-sm md:text-lg">
+        Post your job, set your budget, and get bids instantly. Start now!
+        </p>
+      </div>
+      <div className=" p-4 md:px-16 mx-4 md:py-10 rounded-xl border">
         <Helmet>
-          <title>Add Jobs Page</title>
+          <title>BidPlus | Post new job page</title>
         </Helmet>
         <form onSubmit={handleSubmit}>
           <div className="md:flex mb-4">
@@ -121,7 +126,7 @@ const PostNewJob = () => {
               <label className="label">
                 <span className="label-text ">Category</span>
               </label>
-              <label className="">
+              <label className="border">
                 <select name="category" required className="select w-full">
                   <option value="web-development">Web Development</option>
                   <option value="digital-marketing">Digital Marketing</option>
@@ -139,7 +144,7 @@ const PostNewJob = () => {
                 <input
                   type="text"
                   name="price"
-                  placeholder="Minimum Maximum Price"
+                  placeholder="Price"
                   className="input input-bordered w-full"
                   required
                 />
@@ -148,8 +153,8 @@ const PostNewJob = () => {
           </div>
           <input
             type="submit"
-            value="Add Job Information"
-            className="btn btn-block"
+            value="Post Job"
+            className="btn w-full btn-sm md:btn-md border-[#6D54FE] bg-white text-[#6D54FE] hover:bg-[#6D54FE] hover:text-white"
           />
         </form>
       </div>
