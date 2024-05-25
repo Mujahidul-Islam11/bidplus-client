@@ -14,7 +14,7 @@ const PostedJobDetails = ({ posted, setUserData }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://skill-swap-hub-server.vercel.app/JobsId/${posted._id}`, {
+        fetch(`https://skill-swap-hub-server.vercel.app/JobsId/${posted?._id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -25,7 +25,7 @@ const PostedJobDetails = ({ posted, setUserData }) => {
                 "Your job data has been deleted successfully",
                 "success"
                 );
-                const remaining = posted.filter(postedUser => postedUser._id !== id)
+                const remaining = posted?.filter(postedUser => postedUser?._id !== id)
                 setUserData(remaining)
                 
             }
@@ -36,12 +36,12 @@ const PostedJobDetails = ({ posted, setUserData }) => {
   return (
     <div className="card bg-base-100 shadow-xl">
       <div className="card-body">
-        <h2 className="card-title">{posted.jobTitle}</h2>
-        <p>{posted.price}</p>
-        <p>{posted.description}</p>
-        <p>{posted.deadline}</p>
+        <h2 className="card-title">{posted?.jobTitle}</h2>
+        <p>{posted?.price}</p>
+        <p>{posted?.description}</p>
+        <p>{posted?.deadline}</p>
         <div className="card-actions justify-between ">
-          <NavLink to={`/updateDetails/${posted._id}`}>
+          <NavLink to={`/updateDetails/${posted?._id}`}>
             <button className="btn btn-primary">Update</button>
           </NavLink>
           <button onClick={handleDeleteJob} className="btn btn-primary">

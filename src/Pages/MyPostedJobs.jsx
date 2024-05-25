@@ -20,7 +20,6 @@ const MyPostedJobs = () => {
         setUserData(data);
       });
   }, [userData, user]);
-  console.log(userData.length)
   return (
     <div className="my-16 md:my-20">
       {userData?.length > 0 ? (

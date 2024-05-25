@@ -19,6 +19,7 @@ const MyBid = () => {
         setBidData(data);
       });
   }, [user]);
+  
   return (
     <div className="container mx-auto my-16 md:my-20">
       <Helmet>
