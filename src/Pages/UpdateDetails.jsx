@@ -52,10 +52,7 @@ const UpdateDetails = () => {
       <Helmet>
           <title>Updating Page</title>
         </Helmet>
-      <div className="bg-cyan-200 p-4 md:p-24 rounded-xl">
-        <h2 className="text-3xl  mt-[-50px] font-extrabold">
-          Update Job Informations
-        </h2>
+      <div className="bg-white border p-4 md:p-24 rounded-xl">
         <form onSubmit={handleOnSubmit}>
           <div className="md:flex mb-4">
             <div className="form-control w-full md:w-1/2">
@@ -152,7 +149,11 @@ const UpdateDetails = () => {
               </label>
             </div>
           </div>
-          <input type="submit" value="Update" className="btn btn-block" />
+          <input
+            type="submit"
+            value="Update Job"
+            className="btn w-full btn-sm md:btn-md border-[#6D54FE] bg-white text-[#6D54FE] hover:bg-[#6D54FE] hover:text-white"
+          />
         </form>
       </div>
     </div>
