@@ -123,7 +123,7 @@ const UpdateDetails = () => {
               <label className="label">
                 <span className="label-text ">Category</span>
               </label>
-              <label className="">
+              <label className="border">
                 <select name="category" required className="select w-full">
                   <option value="web-development">Web Development</option>
                   <option value="digital-marketing">Digital Marketing</option>
