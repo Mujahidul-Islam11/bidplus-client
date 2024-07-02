@@ -23,6 +23,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.error(error);
+        swal("Warning!", "Invalid Login Credential", "error")
       });
   };
 
@@ -44,7 +45,7 @@ const Login = () => {
         <title>Login-Page</title>
       </Helmet>
       <div className="mx-4 md:w-4/12 bg-white rounded-lg shadow-lg p-8 border">
-        <h3 className="text-center text-3xl font-bold text-primary mb-6">
+        <h3 className="text-center text-2xl md:text-3xl font-bold mb-6">
           Welcome Back!
         </h3>
         <form onSubmit={handleLogin} className="space-y-4">
@@ -67,8 +68,8 @@ const Login = () => {
             />
           </div>
           <div className="flex justify-between items-center">
-            <NavLink to="/register" className="font-bold text-primary">
-              Don't have an account? Register
+            <NavLink to="/register" className="font-bold">
+              Don't have an account? <span className="text-primary">Register</span>
             </NavLink>
             <button type="submit" className="btn btn-primary">
               Login
@@ -80,11 +81,6 @@ const Login = () => {
           onClick={handleGoogleLogin}
           className="flex btn capitalize bg-[#6D54FE] text-white hover:bg-[#6e54fed6] w-full"
         >
-          <img
-            src="https://i.ibb.co/QpyZXNR/7123025-logo-google-g-icon.png"
-            className="w-10 h-10"
-            alt=""
-          />
           <h3 className="font-bold text-xl flex md:hidden">Google</h3>
           <h3 className="font-bold text-xl hidden md:flex">Continue with Google</h3>
         </button>
