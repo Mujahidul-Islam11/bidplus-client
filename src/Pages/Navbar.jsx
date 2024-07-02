@@ -72,7 +72,7 @@ const Navbar = () => {
         <div className="navbar-start">
           {/* Dropdown section for small device */}
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <label tabIndex={0} className="btn btn-ghost md:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -126,11 +126,11 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
-            <div className="flex gap-3 md:gap-6">
+            <div className="flex gap-2 md:gap-6">
               <NavLink to="/login">
               <button
                 type="button"
-                className="btn text-sm md:text-base capitalize border-[#6D54FE] bg-white text-[#6D54FE] hover:bg-[#6D54FE] hover:text-white"
+                className="btn btn-sm md:btn-md md:text-base capitalize border-[#6D54FE] bg-white text-[#6D54FE] hover:bg-[#6D54FE] hover:text-white"
               >
                 Log in
               </button>
@@ -138,7 +138,7 @@ const Navbar = () => {
               <NavLink to="/register">
               <button
                 type="button"
-                className="btn text-sm md:text-base capitalize bg-[#6D54FE] text-white hover:text-[#6D54FE] hover:border-[#6D54FE] hover:bg-white"
+                className="btn btn-sm md:btn-md md:text-base capitalize bg-[#6D54FE] text-white hover:text-[#6D54FE] hover:border-[#6D54FE] hover:bg-white"
               >
                 Sign Up
               </button>
