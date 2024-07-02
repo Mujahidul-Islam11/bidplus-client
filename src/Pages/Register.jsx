@@ -24,7 +24,7 @@ const Register = () => {
     ) {
       swal(
         "Error!",
-        "Minimum six characters, at least one capital letter and one number and a special character",
+        "Mini. 6 characters (one capital letter, number, and a special character)",
         "error"
       );
     }
