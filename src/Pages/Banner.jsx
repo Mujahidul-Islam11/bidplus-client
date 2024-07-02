@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <div className="hero flex gap-6 w-full h-[400px] text-center my-6">
+    <div className="hero flex gap-6 w-full h-[300px] md:h-[400px] text-center my-3 md:my-6">
       <div className="mx-auto p-4 md:px-44">
         <h3 className="text-2xl md:text-5xl font-700">
           Find Your Next Dream Job - Bid and Get Hired Today{" "}
