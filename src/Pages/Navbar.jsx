@@ -60,7 +60,8 @@ const Navbar = () => {
               isPending ? "pending" : isActive ? " text-[#6D54FE]" : ""
             }
           >
-         Bid Tracker
+         Bid Requests
+
           </NavLink>
       </li>
       
