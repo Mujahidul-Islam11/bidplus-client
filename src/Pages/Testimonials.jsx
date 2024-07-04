@@ -14,7 +14,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <>
+    <div className="my-16 md:my-20">
       <div className="mb-6 md:mb-12">
         <h3 className="font-bold text-center text-2xl md:text-5xl mb-3">
           What Our Customers <br /> Are Saying
@@ -27,13 +27,13 @@ const Testimonials = () => {
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         {testimonials?.map((testimonial) => (
           <SwiperSlide>
-            <div className="w-3/4 mx-auto space-y-6 border px-8 py-4 rounded-md shadow-md">
+            <div className="w-4/5 md:w-3/4 mx-auto space-y-6 border px-4 md:px-8 py-2 md:py-4 rounded-md shadow-md">
               <img
-                className="w-20 h-20 object-cover rounded-full"
+                className="w-14 md:w-20 h-14 md:h-20 object-cover rounded-full"
                 src={testimonial?.image}
                 alt=""
               />
-              <p className="text-2xl">{testimonial?.testimonial}</p>
+              <p className="text-xl md:text-2xl">{testimonial?.testimonial}</p>
               <div>
                 <h3 className="text-xl font-semibold mb-1">
                   {testimonial?.name}
@@ -44,7 +44,7 @@ const Testimonials = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 };
 
