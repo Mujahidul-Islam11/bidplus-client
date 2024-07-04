@@ -1,21 +1,26 @@
-import React from "react"
-import { useKeenSlider } from "keen-slider/react"
-import "keen-slider/keen-slider.min.css"
+import React, { useEffect, useState } from "react"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
 
 const Testimonials = () => {
-    const [sliderRef] = useKeenSlider({
-        loop: true,
-      })
-    
+    const [testimonials, setTestimonials] = useState([]);
+
+    useEffect(()=>{
+        fetch('/testimonials.json')
+        .then(res => res.json())
+        .then(data => setTestimonials(data))
+    },[])
+
       return (
-        <div ref={sliderRef} className="keen-slider">
-          <div className="keen-slider__slide number-slide1">1</div>
-          <div className="keen-slider__slide number-slide2">2</div>
-          <div className="keen-slider__slide number-slide3">3</div>
-          <div className="keen-slider__slide number-slide4">4</div>
-          <div className="keen-slider__slide number-slide5">5</div>
-          <div className="keen-slider__slide number-slide6">6</div>
-        </div>
+        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+        {
+            testimonials?.map(testimonial => <SwiperSlide>
+                <h3>{testimonial?.name}</h3>
+            </SwiperSlide>)
+        }
+      </Swiper>
       )
 };
 
