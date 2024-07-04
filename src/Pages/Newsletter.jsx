@@ -8,7 +8,7 @@ const Newsletter = () => {
                 <p className='text-white'>Get E-mail updates about our latest surveys</p>
             </div>
             <div className='mt-6 md:mt-0 flex-col md:flex-row flex gap-4 items-center'>
-                <input placeholder='Enter email to get started' type="text" className='md:w-[400px] border outline-gray-300 py-3 px-6 rounded-lg '/>
+                <input placeholder='Enter email to get started' type="text" className='md:w-[400px] border outline-gray-500 py-3 px-6 rounded-lg '/>
                 <button className='btn btn-primary bg-[#2F71FF] text-white border-none hover:bg-[#2f71ffbf]'>Subscribe</button>
             </div>
         </div>
