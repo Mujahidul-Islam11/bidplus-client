@@ -9,11 +9,13 @@ const Home = () => {
   return (
     <div className="container mx-auto">
       <Banner></Banner>
+      <div className="mt-18">
       <TabCategories></TabCategories>
+      </div>
       <FeaturedFreelancers></FeaturedFreelancers>
       <Blog></Blog>
       <Testimonials></Testimonials>
-      <Newsletter></Newsletter>
+      {/* <Newsletter></Newsletter> */}
     </div>
   );
 };
