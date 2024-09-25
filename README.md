@@ -1,8 +1,6 @@
 ## BidPlus - Online Job Portal
 **Live Link:** [BidPlus App](https://bidplus.netlify.app/)
 
----
-
 ### Project Features
 
 - **User Authentication:**  
@@ -25,7 +23,7 @@
 1. **Clone the Repository:**  
    Clone this repository to your local machine using:
    ```bash
-   git clone https://github.com/yourusername/bidplus.git
+   git clone https://github.com/Mujahidul-Islam11/bidplus-client.git
    ```
 
 2. **Install Dependencies:**  
