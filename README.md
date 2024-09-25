@@ -1,5 +1,3 @@
-#### README File for BidPlus App
-
 **Project Name:** BidPlus  
 **Live Link:** [BidPlus App](https://bidplus.netlify.app/)
 
