@@ -1,4 +1,4 @@
-**Project Name:** BidPlus  
+## BidPlus - Online Job Portal
 **Live Link:** [BidPlus App](https://bidplus.netlify.app/)
 
 ---
